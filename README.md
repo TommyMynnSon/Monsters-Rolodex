@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# GitHub Pages Deployed Link
 
-In the project directory, you can run:
+https://tommymynnson.github.io/Monsters-Rolodex/
 
-### `npm start`
+# Notes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+REACT CONCEPTS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. React: "Don't touch the DOM. I'll do it."
+    - React takes care of DOM changes for us using something called the VirtualDOM.
 
-### `npm test`
+2. Build websites like lego blocks.
+    - React builds websites with components.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Unidirectonal data flow (one way data flow).
+    - Data flows only one way so it's easier to debug our code.
 
-### `npm run build`
+4. React: "I'm just the UI, the rest is up to you."
+    - Unlike AngularJS which is like a kitchen with everything you need all at once, React is like a stove and anything you need can be easily grabbed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+REACT KEYWORDS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Declarative
+- JSX
+- Components
+- State
+- Props
+- VirtualDOM
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React is a Declarative paradigm, that is, instead of telling our app what to do, we give it a State, some Components that are built with JSX which sometimes receives Props, which
+creates a VirtualDOM in JavaScript and used by the React library to update the DOM in a Declarative way.
 
-### `npm run eject`
+THE JOB OF A REACT DEVELOPER
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Decide on Components.
+2. Decide the State and where it lives.
+3. What changes when State changes.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+NVM
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- https://github.com/nvm-sh/nvm#installation-and-update
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+NODE
 
-## Learn More
+- https://nodejs.org/en/download/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+YARN
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- https://yarnpkg.com/getting-started/install
 
-### Code Splitting
+NPM vs YARN
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Install dependencies from package.json: npm install == yarn
+- Install a package and add to package.json: npm install package --save == yarn add package
+- Install a devDependency to package.json: npm install package --save-dev == yarn add package --dev
+- Remove a dependency from package.json: npm uninstall package --save == yarn remove package
+- Upgrade a package to its latest version: npm update --save == yarn upgrade
+- Install a package globally: npm install package -g == yarn global add package
 
-### Analyzing the Bundle Size
+NPX vs NPM
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- npx installs packages and executes them immediately and does not save the package to disc.
+- npm installs packages to disc and does not execute them immediately.
 
-### Making a Progressive Web App
+DO NOT EJECT YOUR CREATE-REACT-APP
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- By using create-react-app we automatically get the best system and project build out of the box.
+- Any time there are updates and the industry changes its way of doings things, create-react-app will have these changes automatically implemented by professionals.
+- You lose all the benefits as create-react-app gets more and more updates.
 
-### Advanced Configuration
+CLASSES VS HOOKS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- TBA
 
-### Deployment
+GENERAL REACT TIPS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Good rule of thumb concerning arrow functions and binding in React: Use arrow functions on any class methods you define and aren't part of React (i.e. render(), componentDidMount()).
+    - https://reactjs.org/docs/handling-events.html
 
-### `npm run build` fails to minify
+GITHUB
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Why GitHub decided to rename the original branch from master to main: https://github.com/github/renaming
+
+LIFECYCLE METHODS (CLASSES)
+
+- Methods that get called at different stages of when components gets rendered.
+    - componentDidMount: called when a component gets rendered for the first time.
